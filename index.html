@@ -1,246 +1,22 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>OB Dripwear</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-      margin: 0;
-    }
-
-    header {
-      background-color: #222;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header img {
-      height: 80px;
-      margin-bottom: 10px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    header p {
-      color: #ccc;
-      font-style: italic;
-    }
-
-    .section-title {
-      text-align: center;
-      margin: 40px 0 10px;
-      font-size: 2rem;
-      color: #555;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    .product {
-      background: white;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      transition: 0.3s ease;
-    }
-
-    .product:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 12px rgba(0,0,0,0.1);
-    }
-
-    .product h3 {
-      color: #333;
-      margin-top: 0;
-    }
-
-    .product a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background: #333;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .product a:hover {
-      background: #555;
-    }
-
-    .about, .contact, .form-section {
-      background: white;
-      margin: 40px auto;
-      max-width: 800px;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-
-    .form-section form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .form-section input, .form-section textarea {
-      margin: 10px 0;
-      padding: 10px;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    .form-section button {
-      background-color: #333;
-      color: white;
-      padding: 12px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-
-    .form-section button:hover {
-      background-color: #555;
-    }
-
-    footer {
-      background: #222;
-      color: #ccc;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <h1>🔥 OB Dripwear 🔥</h1>
 
-  <header>
-    <!-- Replace this link with your real logo if you upload one later -->
-    <img src="IMG-20250714-WA0015~2.jpg" alt="OB Dripwear Logo" />
-    <h1>OB Dripwear</h1>
-    <p>Where drip meets the street</p>
-  </header>
-
-  <!-- Stories Section -->
-<section style="padding: 20px; background:#f2f2f2;">
-  <h2 style="text-align:center;">@OB Dripwear Stories</h2>
-  <div style="display:flex; gap:15px; overflow-x:auto; padding: 10px 0;">
-
-    <!-- Story 1 -->
-    <div style="text-align:center;">
-      <img src="img_1752515159228.png" alt="Story 1" style="width:80px; height:80px; border-radius:50%; border:3px solid gold; object-fit:cover; cursor:pointer;" onclick="openStory('popup1')">
-      <p style="font-size:0.8rem;">Social Media</p>
-    </div>
-
-    <!-- Story 2 -->
-    <div style="text-align:center;">
-      <img src="story2.jpg" alt="Story 2" style="width:80px; height:80px; border-radius:50%; border:3px solid gold; object-fit:cover; cursor:pointer;" onclick="openStory('popup2')">
-      <p style="font-size:0.8rem;">Behind the Scene</p>
-    </div>
-
-    <!-- Story 3 -->
-    <div style="text-align:center;">
-      <img src="IMG-20250714-WA0022.jpg" alt="Story 3" style="width:80px; height:80px; border-radius:50%; border:3px solid gold; object-fit:cover; cursor:pointer;" onclick="openStory('popup3')">
-      <p style="font-size:0.8rem;">Drip Check</p>
-    </div>
-
-  </div>
-</section>
-  
-  <!-- Story Popups -->
-<div id="popup1" class="popup" style="display:none;">
-  <div class="popup-content">
-    <span onclick="closeStory('popup1')" style="float:right; cursor:pointer;">❌</span>
-    <img src="IMG-20250714-WA0022.jpg" alt="Story 1" style="width:100%; max-height:80vh; object-fit:contain;">
-  </div>
-</div>
-
-<div id="popup2" class="popup" style="display:none;">
-  <div class="popup-content">
-    <span onclick="closeStory('popup2')" style="float:right; cursor:pointer;">❌</span>
-    <img src="story2.jpg" alt="Story 2" style="width:100%; max-height:80vh; object-fit:contain;">
-  </div>
-</div>
-
-<div id="popup3" class="popup" style="display:none;">
-  <div class="popup-content">
-    <span onclick="closeStory('popup3')" style="float:right; cursor:pointer;">❌</span>
-    <img src="img_1752515159228.png" alt="Story 3" style="width:100%; max-height:80vh; object-fit:contain;">
-  </div>
-</div>
-
-<!-- Popup Styling -->
-<style>
-.popup {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-.popup-content {
-  position: relative;
-  background: #fff;
-  padding: 10px;
-  border-radius: 8px;
-  max-width: 90%;
-  text-align: center;
-}
-</style>
-
-<!-- JS Script -->
-<script>
-function openStory(id) {
-  document.getElementById(id).style.display = 'flex';
-}
-function closeStory(id) {
-  document.getElementById(id).style.display = 'none';
-}
-</script>
-  
-  <h2 class="section-title"> Featured Sneakers</h2>
-  <section class="products">
-    <div class="product">
-      <h3>Street Blaze X1</h3>
-      <p>R999</p>
-      <a href="https://wa.me/27735250758" target="_blank">Order Now</a>
-    </div>
-    <div class="product">
-      <h3>Urban Pulse 2.0</h3>
-      <p>R850</p>
-      <a href="https://wa.me/27606595588" target="_blank">Order Now</a>
-    </div>
-    <div class="product">
-      <h3>Gold Flex Runner</h3>
-      <p>R1100</p>
-      <a href="https://wa.me/27735250758" target="_blank">Order Now</a>
-    </div>
-  </section>
+  <nav>
+    <a href="sneakers/sneakers.html">👟 Sneakers</a>
+    <a href="clothes/clothes.html">👕 Clothes</a>
+    <a href="wigs/wigs.html">💇🏾‍♀️ Wieves & Frontals</a>
+  </nav>
 
   <section class="about">
     <h2>About OB Dripwear</h2>
-    <p>OB Dripwear is where street meets style. Founded by Ofentse and Bushy, we bring exclusive sneakers to the bold and confident. Stay fresh, stay iconic.</p>
+    <p>OB Dripwear is where street meets style. Founded by Ofentse and Bushy, we bring exclusive sneakers, clothes, and frontals to the bold and confident. Stay fresh, stay iconic.</p>
   </section>
 
   <section class="contact">
@@ -250,35 +26,9 @@ function closeStory(id) {
     <p>📷 Instagram: @obdripwear</p>
   </section>
 
-  <section class="form-section">
-    <h2>💬 Contact Form</h2>
-    <form action="https://formspree.io/f/mgegpgyv" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <section class="payment-sizes" style="background:#fff; padding: 40px; max-width:800px; margin: 40px auto; border-radius:12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-  <h2 style="text-align:center; color:#333;">🧾 Payment Options</h2>
-  <ul style="list-style-type: none; padding-left: 0; font-size: 1.1rem;">
-    <li>💳 EFT (Capitec / FNB)</li>
-    <li>📱 Yoco Card Payments (In-store)</li>
-    <li>💵 Cash on Delivery (Pretoria Only)</li>
-    <li>📦 Courier Payment via WhatsApp</li>
-  </ul>
-
-  <h2 style="text-align:center; margin-top:40px; color:#333;">👟 Available Sizes</h2>
-  <p style="text-align:center; font-size:1.1rem;">
-    UK Sizes: 5, 6, 7, 8, 9, 10, 11  
-    <br/>All stock is limited — first come, first served!
-  </p>
-  </section>
-  
   <footer>
     <p>&copy; 2025 OB Dripwear. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
+  
