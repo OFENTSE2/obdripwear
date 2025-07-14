@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OB Dripwear</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #000;
+      padding: 30px 20px;
+      text-align: center;
+      color: gold;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 5px;
+    }
+    header p {
+      font-style: italic;
+      color: silver;
+    }
+    .products {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .products h2 {
+      text-align: center;
+      color: gold;
+    }
+    .product {
+      background-color: #1e1e1e;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+    }
+    .product h3 {
+      margin: 0 0 10px;
+      color: silver;
+    }
+    .product p {
+      margin: 5px 0;
+    }
+    .product a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: gold;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .about, .contact {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #1a1a1a;
+      border-radius: 10px;
+    }
+    .about h2, .contact h2 {
+      color: gold;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: silver;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>OB Dripwear</h1>
+    <p>Where drip meets the street</p>
+  </header>
+
+  <section class="products">
+    <h2>🔥 Featured Drip</h2>
+
+    <div class="product">
+      <h3>Street Blaze X1</h3>
+      <p>R999</p>
+      <a href="https://wa.me/27735250758" target="_blank">Order on WhatsApp</a>
+    </div>
+
+    <div class="product">
+      <h3>Urban Pulse 2.0</h3>
+      <p>R850</p>
+      <a href="https://wa.me/27606595588" target="_blank">Order on WhatsApp</a>
+    </div>
+
+    <div class="product">
+      <h3>Gold Flex Runner</h3>
+      <p>R1100</p>
+      <a href="https://wa.me/27735250758" target="_blank">Order on WhatsApp</a>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>About OB Dripwear</h2>
+    <p>Born from the vision of Ofentse and Bushy, OB Dripwear is more than just sneakers — it's a culture. We bring streetwear and style together, offering exclusive kicks for real ones who live bold and walk with confidence.</p>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>WhatsApp: 073 525 0758 / 060 659 5588</p>
+    <p>Email: obdripwear@gmail.com (optional)</p>
+    <p>Instagram: @obdripwear (optional)</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 OB Dripwear. All rights reserved. Designed with drip.</p>
+  </footer>
+</body>
+</html>
