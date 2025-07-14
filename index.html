@@ -2,33 +2,180 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OB Dripwear</title>
-  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #444;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .product {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .contact, .payment-sizes, .testimonials, .promo {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    footer {
+      background-color: #444;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .popup {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+    .popup-content {
+      position: relative;
+      background: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      max-width: 90%;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <h1>🔥 OB Dripwear 🔥</h1>
+  <header>
+    <h1>OB Dripwear</h1>
+    <p>Where Drip Meets the Street</p>
+  </header>
 
-  <nav>
-    <a href="sneakers/sneakers.html">👟 Sneakers</a>
-    <a href="clothes/clothes.html">👕 Clothes</a>
-    <a href="wigs/wigs.html">💇🏾‍♀️ Wieves & Frontals</a>
-  </nav>
+  <!-- Stories Section -->
+  <section style="padding: 20px; background:#efefef;">
+    <h2 style="text-align:center;">📸 OB Dripwear Stories</h2>
+    <div style="display:flex; gap:15px; overflow-x:auto; padding: 10px 0;">
 
-  <section class="about">
-    <h2>About OB Dripwear</h2>
-    <p>OB Dripwear is where street meets style. Founded by Ofentse and Bushy, we bring exclusive sneakers, clothes, and frontals to the bold and confident. Stay fresh, stay iconic.</p>
+      <div style="text-align:center;">
+        <img src="story1.jpg" alt="Story 1" style="width:80px; height:80px; border-radius:50%; border:3px solid #ccc; object-fit:cover; cursor:pointer;" onclick="openStory('popup1')">
+        <p style="font-size:0.8rem;">Drop Day</p>
+      </div>
+
+      <div style="text-align:center;">
+        <img src="story2.jpg" alt="Story 2" style="width:80px; height:80px; border-radius:50%; border:3px solid #ccc; object-fit:cover; cursor:pointer;" onclick="openStory('popup2')">
+        <p style="font-size:0.8rem;">Behind the Scene</p>
+      </div>
+
+      <div style="text-align:center;">
+        <img src="story3.jpg" alt="Story 3" style="width:80px; height:80px; border-radius:50%; border:3px solid #ccc; object-fit:cover; cursor:pointer;" onclick="openStory('popup3')">
+        <p style="font-size:0.8rem;">Drip Check</p>
+      </div>
+
+    </div>
   </section>
 
-  <section class="contact">
-    <h2>Contact Info</h2>
-    <p>📞 073 525 0758 / 060 659 5588</p>
-    <p>📧 obdripwear@gmail.com</p>
-    <p>📷 Instagram: @obdripwear</p>
+  <section class="section">
+    <div class="product">
+      <h2>Street Blaze X1</h2>
+      <p>Price: R999</p>
+      <p>Sizes: UK 6–10</p>
+      <a href="https://wa.me/27735250758?text=Hi%20OB%20Dripwear!%20I'm%20interested%20in%20Street%20Blaze%20X1." target="_blank">Order on WhatsApp</a>
+    </div>
+
+    <div class="promo">
+      <h2>🎉 Winter Promo</h2>
+      <p>Get <strong>R100 off</strong> when you buy 2 or more pairs!<br>
+      Use Code: <strong>OBWINTER</strong> at checkout or via WhatsApp.</p>
+    </div>
+
+    <div class="payment-sizes">
+      <h2>🚚 Delivery & Payment Info</h2>
+      <ul>
+        <li><strong>Pretoria:</strong> Same-day delivery available (R60)</li>
+        <li><strong>Other Provinces:</strong> 2–4 days via courier (R100)</li>
+        <li><strong>Payment:</strong> EFT, Yoco card swipe, or PayFast (coming soon)</li>
+        <li><strong>WhatsApp:</strong> Place your order directly via chat</li>
+      </ul>
+    </div>
+
+    <div class="testimonials">
+      <h2>⭐ What Our Customers Say</h2>
+      <blockquote>
+        “🔥 These sneakers are fire! I wore mine to church and got 3 compliments.”<br><strong>— Lebo, Sunnyside</strong>
+      </blockquote>
+      <blockquote>
+        “Comfy, bold, and affordable. OB Dripwear is making noise in the streets.”<br><strong>— Jay, Pretoria North</strong>
+      </blockquote>
+      <blockquote>
+        “Delivered in 2 days. Clean packaging. Will order again!”<br><strong>— Naledi, Mamelodi</strong>
+      </blockquote>
+    </div>
   </section>
+
+  <!-- Story Popups -->
+  <div id="popup1" class="popup" style="display:none;">
+    <div class="popup-content">
+      <span onclick="closeStory('popup1')" style="float:right; cursor:pointer;">❌</span>
+      <img src="story1.jpg" alt="Story 1" style="width:100%; max-height:80vh; object-fit:contain;">
+    </div>
+  </div>
+
+  <div id="popup2" class="popup" style="display:none;">
+    <div class="popup-content">
+      <span onclick="closeStory('popup2')" style="float:right; cursor:pointer;">❌</span>
+      <img src="story2.jpg" alt="Story 2" style="width:100%; max-height:80vh; object-fit:contain;">
+    </div>
+  </div>
+
+  <div id="popup3" class="popup" style="display:none;">
+    <div class="popup-content">
+      <span onclick="closeStory('popup3')" style="float:right; cursor:pointer;">❌</span>
+      <img src="story3.jpg" alt="Story 3" style="width:100%; max-height:80vh; object-fit:contain;">
+    </div>
+  </div>
+
+  <script>
+    function openStory(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+    function closeStory(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
 
   <footer>
     <p>&copy; 2025 OB Dripwear. All rights reserved.</p>
   </footer>
 </body>
-</html>
-  
+        </html>
+        
