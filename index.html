@@ -139,6 +139,86 @@
     <p>Where drip meets the street</p>
   </header>
 
+  <!-- Stories Section -->
+<section style="padding: 20px; background:#f2f2f2;">
+  <h2 style="text-align:center;">📸 OB Dripwear Stories</h2>
+  <div style="display:flex; gap:15px; overflow-x:auto; padding: 10px 0;">
+
+    <!-- Story 1 -->
+    <div style="text-align:center;">
+      <img src="story1.jpg" alt="Story 1" style="width:80px; height:80px; border-radius:50%; border:3px solid gold; object-fit:cover; cursor:pointer;" onclick="openStory('popup1')">
+      <p style="font-size:0.8rem;">Drop Day</p>
+    </div>
+
+    <!-- Story 2 -->
+    <div style="text-align:center;">
+      <img src="story2.jpg" alt="Story 2" style="width:80px; height:80px; border-radius:50%; border:3px solid gold; object-fit:cover; cursor:pointer;" onclick="openStory('popup2')">
+      <p style="font-size:0.8rem;">Behind the Scene</p>
+    </div>
+
+    <!-- Story 3 -->
+    <div style="text-align:center;">
+      <img src="story3.jpg" alt="Story 3" style="width:80px; height:80px; border-radius:50%; border:3px solid gold; object-fit:cover; cursor:pointer;" onclick="openStory('popup3')">
+      <p style="font-size:0.8rem;">Drip Check</p>
+    </div>
+
+  </div>
+</section>
+  
+  <!-- Story Popups -->
+<div id="popup1" class="popup" style="display:none;">
+  <div class="popup-content">
+    <span onclick="closeStory('popup1')" style="float:right; cursor:pointer;">❌</span>
+    <img src="story1.jpg" alt="Story 1" style="width:100%; max-height:80vh; object-fit:contain;">
+  </div>
+</div>
+
+<div id="popup2" class="popup" style="display:none;">
+  <div class="popup-content">
+    <span onclick="closeStory('popup2')" style="float:right; cursor:pointer;">❌</span>
+    <img src="story2.jpg" alt="Story 2" style="width:100%; max-height:80vh; object-fit:contain;">
+  </div>
+</div>
+
+<div id="popup3" class="popup" style="display:none;">
+  <div class="popup-content">
+    <span onclick="closeStory('popup3')" style="float:right; cursor:pointer;">❌</span>
+    <img src="story3.jpg" alt="Story 3" style="width:100%; max-height:80vh; object-fit:contain;">
+  </div>
+</div>
+
+<!-- Popup Styling -->
+<style>
+.popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.popup-content {
+  position: relative;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 90%;
+  text-align: center;
+}
+</style>
+
+<!-- JS Script -->
+<script>
+function openStory(id) {
+  document.getElementById(id).style.display = 'flex';
+}
+function closeStory(id) {
+  document.getElementById(id).style.display = 'none';
+}
+</script>
+  
   <h2 class="section-title">🔥 Featured Sneakers</h2>
   <section class="products">
     <div class="product">
