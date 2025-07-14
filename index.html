@@ -1,181 +1,188 @@
   <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>OB Dripwear</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
       color: #333;
+      margin: 0;
     }
+
     header {
-      background-color: #444;
+      background-color: #222;
       color: white;
-      padding: 60px 20px;
+      padding: 20px;
       text-align: center;
     }
+
+    header img {
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
     header h1 {
       margin: 0;
-      font-size: 2.8rem;
+      font-size: 2.5rem;
     }
+
     header p {
-      margin-top: 10px;
-      font-size: 1.2rem;
+      color: #ccc;
+      font-style: italic;
     }
-    .section {
-      padding: 40px 20px;
-      max-width: 900px;
+
+    .section-title {
+      text-align: center;
+      margin: 40px 0 10px;
+      font-size: 2rem;
+      color: #555;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
       margin: auto;
+      padding: 20px;
     }
-    .section h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+
     .product {
-      background-color: white;
+      background: white;
       padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: 0.3s ease;
     }
-    .contact, .payment-sizes, .testimonials, .promo {
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.1);
     }
-    footer {
-      background-color: #444;
+
+    .product h3 {
+      color: #333;
+      margin-top: 0;
+    }
+
+    .product a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #333;
       color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .product a:hover {
+      background: #555;
+    }
+
+    .about, .contact, .form-section {
+      background: white;
+      margin: 40px auto;
+      max-width: 800px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .form-section form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-section input, .form-section textarea {
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .form-section button {
+      background-color: #333;
+      color: white;
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .form-section button:hover {
+      background-color: #555;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
       text-align: center;
       padding: 20px;
-    }
-    .popup {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.8);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 999;
-    }
-    .popup-content {
-      position: relative;
-      background: #fff;
-      padding: 10px;
-      border-radius: 8px;
-      max-width: 90%;
-      text-align: center;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
+
   <header>
+    <!-- Replace this link with your real logo if you upload one later -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/200px-Placeholder_view_vector.svg.png" alt="OB Dripwear Logo" />
     <h1>OB Dripwear</h1>
-    <p>Where Drip Meets the Street</p>
+    <p>Where drip meets the street</p>
   </header>
 
-  <!-- Stories Section -->
-  <section style="padding: 20px; background:#efefef;">
-    <h2 style="text-align:center;">📸 OB Dripwear Stories</h2>
-    <div style="display:flex; gap:15px; overflow-x:auto; padding: 10px 0;">
-
-      <div style="text-align:center;">
-        <img src="story1.jpg" alt="Story 1" style="width:80px; height:80px; border-radius:50%; border:3px solid #ccc; object-fit:cover; cursor:pointer;" onclick="openStory('popup1')">
-        <p style="font-size:0.8rem;">Drop Day</p>
-      </div>
-
-      <div style="text-align:center;">
-        <img src="story2.jpg" alt="Story 2" style="width:80px; height:80px; border-radius:50%; border:3px solid #ccc; object-fit:cover; cursor:pointer;" onclick="openStory('popup2')">
-        <p style="font-size:0.8rem;">Behind the Scene</p>
-      </div>
-
-      <div style="text-align:center;">
-        <img src="story3.jpg" alt="Story 3" style="width:80px; height:80px; border-radius:50%; border:3px solid #ccc; object-fit:cover; cursor:pointer;" onclick="openStory('popup3')">
-        <p style="font-size:0.8rem;">Drip Check</p>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="section">
+  <h2 class="section-title">🔥 Featured Sneakers</h2>
+  <section class="products">
     <div class="product">
-      <h2>Street Blaze X1</h2>
-      <p>Price: R999</p>
-      <p>Sizes: UK 6–10</p>
-      <a href="https://wa.me/27735250758?text=Hi%20OB%20Dripwear!%20I'm%20interested%20in%20Street%20Blaze%20X1." target="_blank">Order on WhatsApp</a>
+      <h3>Street Blaze X1</h3>
+      <p>R999</p>
+      <a href="https://wa.me/27735250758" target="_blank">Order Now</a>
     </div>
-
-    <div class="promo">
-      <h2>🎉 Winter Promo</h2>
-      <p>Get <strong>R100 off</strong> when you buy 2 or more pairs!<br>
-      Use Code: <strong>OBWINTER</strong> at checkout or via WhatsApp.</p>
+    <div class="product">
+      <h3>Urban Pulse 2.0</h3>
+      <p>R850</p>
+      <a href="https://wa.me/27606595588" target="_blank">Order Now</a>
     </div>
-
-    <div class="payment-sizes">
-      <h2>🚚 Delivery & Payment Info</h2>
-      <ul>
-        <li><strong>Pretoria:</strong> Same-day delivery available (R60)</li>
-        <li><strong>Other Provinces:</strong> 2–4 days via courier (R100)</li>
-        <li><strong>Payment:</strong> EFT, Yoco card swipe, or PayFast (coming soon)</li>
-        <li><strong>WhatsApp:</strong> Place your order directly via chat</li>
-      </ul>
-    </div>
-
-    <div class="testimonials">
-      <h2>⭐ What Our Customers Say</h2>
-      <blockquote>
-        “🔥 These sneakers are fire! I wore mine to church and got 3 compliments.”<br><strong>— Lebo, Sunnyside</strong>
-      </blockquote>
-      <blockquote>
-        “Comfy, bold, and affordable. OB Dripwear is making noise in the streets.”<br><strong>— Jay, Pretoria North</strong>
-      </blockquote>
-      <blockquote>
-        “Delivered in 2 days. Clean packaging. Will order again!”<br><strong>— Naledi, Mamelodi</strong>
-      </blockquote>
+    <div class="product">
+      <h3>Gold Flex Runner</h3>
+      <p>R1100</p>
+      <a href="https://wa.me/27735250758" target="_blank">Order Now</a>
     </div>
   </section>
 
-  <!-- Story Popups -->
-  <div id="popup1" class="popup" style="display:none;">
-    <div class="popup-content">
-      <span onclick="closeStory('popup1')" style="float:right; cursor:pointer;">❌</span>
-      <img src="story1.jpg" alt="Story 1" style="width:100%; max-height:80vh; object-fit:contain;">
-    </div>
-  </div>
+  <section class="about">
+    <h2>About OB Dripwear</h2>
+    <p>OB Dripwear is where street meets style. Founded by Ofentse and Bushy, we bring exclusive sneakers to the bold and confident. Stay fresh, stay iconic.</p>
+  </section>
 
-  <div id="popup2" class="popup" style="display:none;">
-    <div class="popup-content">
-      <span onclick="closeStory('popup2')" style="float:right; cursor:pointer;">❌</span>
-      <img src="story2.jpg" alt="Story 2" style="width:100%; max-height:80vh; object-fit:contain;">
-    </div>
-  </div>
+  <section class="contact">
+    <h2>Contact Info</h2>
+    <p>📞 073 525 0758 / 060 659 5588</p>
+    <p>📧 obdripwear@gmail.com</p>
+    <p>📷 Instagram: @obdripwear</p>
+  </section>
 
-  <div id="popup3" class="popup" style="display:none;">
-    <div class="popup-content">
-      <span onclick="closeStory('popup3')" style="float:right; cursor:pointer;">❌</span>
-      <img src="story3.jpg" alt="Story 3" style="width:100%; max-height:80vh; object-fit:contain;">
-    </div>
-  </div>
-
-  <script>
-    function openStory(id) {
-      document.getElementById(id).style.display = 'flex';
-    }
-    function closeStory(id) {
-      document.getElementById(id).style.display = 'none';
-    }
-  </script>
+  <section class="form-section">
+    <h2>💬 Contact Form</h2>
+    <form action="https://formspree.io/f/mgegpgyv" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
   <footer>
     <p>&copy; 2025 OB Dripwear. All rights reserved.</p>
   </footer>
+
 </body>
-        </html>
-        
+</html>
