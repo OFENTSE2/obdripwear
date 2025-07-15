@@ -1,198 +1,137 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OB Dripwear</title>
   <style>
-    body {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-      margin: 0;
-    }
-
-    header {
-      background-color: #222;
       color: white;
-      padding: 20px;
-      text-align: center;
+      background: black;
     }
 
-    header img {
-      height: 80px;
-      margin-bottom: 10px;
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
 
-    header p {
-      color: #ccc;
-      font-style: italic;
-    }
-
-    .section-title {
-      text-align: center;
-      margin: 40px 0 10px;
-      font-size: 2rem;
-      color: #555;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    .product {
-      background: white;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      transition: 0.3s ease;
-    }
-
-    .product:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 12px rgba(0,0,0,0.1);
-    }
-
-    .product h3 {
-      color: #333;
-      margin-top: 0;
-    }
-
-    .product a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background: #333;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .product a:hover {
-      background: #555;
-    }
-
-    .about, .contact, .form-section {
-      background: white;
-      margin: 40px auto;
-      max-width: 800px;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-
-    .form-section form {
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
       display: flex;
       flex-direction: column;
-    }
-
-    .form-section input, .form-section textarea {
-      margin: 10px 0;
-      padding: 10px;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    .form-section button {
-      background-color: #333;
-      color: white;
-      padding: 12px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-
-    .form-section button:hover {
-      background-color: #555;
-    }
-
-    footer {
-      background: #222;
-      color: #ccc;
+      justify-content: center;
+      align-items: center;
       text-align: center;
       padding: 20px;
-      font-size: 0.9rem;
+    }
+
+    .logo {
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 4px;
+      background-color: white;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin-bottom: 30px;
+    }
+
+    .hero h2 {
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .shop-btn {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+      padding: 14px 30px;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .shop-btn:hover {
+      background: white;
+      color: black;
+    }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, -10px); }
+    }
+
+    @media screen and (max-width: 768px) {
+      .logo {
+        font-size: 2rem;
+        padding: 8px 16px;
+      }
+      .hero h2 {
+        font-size: 1.2rem;
+      }
+      .shop-btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <!-- Replace this link with your real logo if you upload one later -->
-    <img src="IMG-20250714-WA0015~2.jpg" alt="OB Dripwear Logo" />
-    <h1>OB Dripwear</h1>
-    <p>Where drip meets the street</p>
-  </header>
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="your-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
-  <div style="background:#ffd700; color:#000; text-align:center; padding:10px; font-weight:bold;">
-   WINTER SALE — Get 10% Off Orders Over R1000! Use Code: <strong>WINTER10</strong>
-</div>
-
-  <h2 class="section-title"> Featured Sneakers</h2>
-  <section class="products">
-    <div class="product">
-      <h3>Nike Dunk</h3>
-      <p>R999</p>
-      <a href="https://pay.yoco.com/r/2bjWY1" target="_blank">Order Now</a>
+    <div class="hero-content">
+      <div class="logo">OB DRIPWEAR</div>
+      <h2>Street Style. Clean Drip. Iconic Energy.</h2>
+      <a href="#shop"><button class="shop-btn">Click to Shop</button></a>
     </div>
-    <div class="product">
-      <h3>OB DRIPWEAR T SHIRT 0.2</h3>
-      <p>R250</p>
-      <a href="https://pay.yoco.com/r/4Gj91N" target="_blank">Order Now</a>
-    </div>
-    <div class="product">
-      <h3>Gold Flex Runner</h3>
-      <p>R1100</p>
-      <a href="https://wa.me/27735250758" target="_blank">Order Now</a>
-    </div>
+
+    <div class="scroll-down">⌄</div>
   </section>
 
-  <section class="about">
-    <h2>About OB Dripwear</h2>
-    <p>OB Dripwear is where street meets style. Founded by Ofentse and Bushy, we bring exclusive sneakers to the bold and confident. Stay fresh, stay iconic.</p>
+  <!-- Add more sections like Shop, About, Contact here -->
+  <section id="shop" style="background:white; color:black; padding:60px 20px; text-align:center;">
+    <h2>Our Latest Collection</h2>
+    <p>Explore the freshest drops in sneakers, weaves, and streetwear.</p>
   </section>
-
-  <section class="contact">
-    <h2>Contact Info</h2>
-    <p>📞 073 525 0758 / 060 659 5588</p>
-    <p>📧 obdripwear@gmail.com</p>
-    <p>📷 Instagram: @obdripwear</p>
-  </section>
-
-  <section class="form-section">
-    <h2>💬 Contact Form</h2>
-    <form action="https://formspree.io/f/mgegpgyv" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-  <p>&copy; 2025 OB Dripwear. All rights reserved.</p>
-  <p>
-    <a href="https://wa.me/27735250758" target="_blank" style="margin-right:10px;">📱 WhatsApp</a>
-    <a href="https://instagram.com/obdripwear" target="_blank">📷 Instagram</a>
-  </p>
-  </footer>
-  
-  </footer>
 
 </body>
 </html>
