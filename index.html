@@ -186,3 +186,187 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OB Dripwear</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    nav {
+      margin: 20px;
+    }
+    nav a {
+      margin: 0 10px;
+      padding: 10px 15px;
+      background-color: gold;
+      color: black;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 30px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .product {
+      background: #222;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .product img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .product h3 {
+      margin: 10px 0;
+    }
+    .product a {
+      background: gold;
+      color: #000;
+      padding: 10px 15px;
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .payment-sizes {
+      background: #fff;
+      color: #111;
+      padding: 40px;
+      max-width: 800px;
+      margin: 40px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .payment-sizes ul {
+      list-style: none;
+      padding-left: 0;
+      font-size: 1.1rem;
+    }
+    footer {
+      padding: 20px;
+      background: #000;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🛍️ OB Dripwear</h1>
+
+  <nav>
+    <a href="#shoes">👟 Shoes</a>
+    <a href="#clothes">👕 Clothes</a>
+    <a href="#wigs">💇🏾‍♀️ Wigs & Frontals</a>
+  </nav>
+
+  <!-- 👟 SHOES -->
+  <section id="shoes">
+    <h2>👟 Featured Shoes</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://via.placeholder.com/220x220?text=Street+Blaze+X1" alt="Street Blaze X1">
+        <h3>Street Blaze X1</h3>
+        <p>R999</p>
+        <p>Sizes: UK 6 - 10</p>
+        <a href="https://wa.me/27735250758" target="_blank">Order Now</a>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/220x220?text=Gold+Flex+Runner" alt="Gold Flex Runner">
+        <h3>Gold Flex Runner</h3>
+        <p>R1100</p>
+        <p>Sizes: UK 5 - 11</p>
+        <a href="https://wa.me/27735250758" target="_blank">Order Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 👕 CLOTHES -->
+  <section id="clothes">
+    <h2>👕 Featured Clothes</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://via.placeholder.com/220x220?text=Drip+Tee+Black" alt="Drip Tee Black">
+        <h3>Drip Tee – Black</h3>
+        <p>R400</p>
+        <p>Sizes: S, M, L, XL</p>
+        <a href="https://wa.me/27735250758" target="_blank">Order Now</a>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/220x220?text=Signature+Hoodie" alt="Signature Hoodie">
+        <h3>Signature Hoodie</h3>
+        <p>R650</p>
+        <p>Sizes: S, M, L, XL</p>
+        <a href="https://wa.me/27606595588" target="_blank">Order Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 💇🏾‍♀️ WIGS -->
+  <section id="wigs">
+    <h2>💇🏾‍♀️ Wigs & Frontals</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://via.placeholder.com/220x220?text=13x4+Frontal" alt="13x4 Frontal">
+        <h3>13x4 Frontal (Straight)</h3>
+        <p>R1550</p>
+        <a href="https://wa.me/27735250758" target="_blank">Order Now</a>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/220x220?text=Body+Wave+20in" alt="Body Wave Wig">
+        <h3>Body Wave Wig 20”</h3>
+        <p>R2100</p>
+        <a href="https://wa.me/27606595588" target="_blank">Order Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 💳 PAYMENT & SIZES -->
+  <section class="payment-sizes">
+    <h2>🧾 Payment Options</h2>
+    <ul>
+      <li>💳 EFT (Capitec / FNB)</li>
+      <li>📱 Yoco Card Payments (In-store)</li>
+      <li>💵 Cash on Delivery (Pretoria Only)</li>
+      <li>📦 Courier Payment via WhatsApp</li>
+    </ul>
+
+    <h2 style="margin-top:40px;">👟 Available Sizes</h2>
+    <p>UK Sizes: 5, 6, 7, 8, 9, 10, 11  
+    <br/>All stock is limited — first come, first served!</p>
+  </section>
+
+  <!-- 📖 ABOUT -->
+  <section>
+    <h2>About OB Dripwear</h2>
+    <p>OB Dripwear is where street meets style. Founded by Ofentse and Bushy, we bring exclusive sneakers, clothing, and wigs to the bold and confident. Stay fresh, stay iconic.</p>
+  </section>
+
+  <!-- 📞 CONTACT -->
+  <section>
+    <h2>Contact Info</h2>
+    <p>📞 073 525 0758 / 060 659 5588</p>
+    <p>📧 obdripwear@gmail.com</p>
+    <p>📷 Instagram: @obdripwear</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 OB Dripwear. All rights reserved.</p>
+  </footer>
+</body>
+</html>
